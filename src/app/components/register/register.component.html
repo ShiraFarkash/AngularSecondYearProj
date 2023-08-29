@@ -1,0 +1,35 @@
+
+<div class="mainforcontect" style="margin-top: 10%;">
+    <h3 style="font-size: 40px; text-align:center ;
+    display: block; margin-top: 15%;">הרשמה</h3>
+    <p class="text">הכנס את הפרטים:</p>
+<form [formGroup]="loginForm" class="main" (submit)="checkNewUser()">
+    <div class="form-group">
+        <label for="userName">בחר שם משתמש</label>
+        <input type="text" formControlName="userName"
+         placeholder="הכנס שם משתמש" class="fill form-control"
+          id="userName">
+
+        <span class="error"
+         *ngIf="loginForm.controls['userName'].errors!=null">
+            *שדה חובה</span>
+    </div>
+
+    <div class="form-group">
+        <label for="password"> בחר סיסמא</label>
+        <input type="password" placeholder="בחר סיסמא"
+         formControlName="password" class="fill form-control"
+          id="password">
+
+        <span class="error" *ngIf="loginForm.controls['password']
+           .errors!=null">*שדה חובה</span>
+    </div>
+
+
+    <div>
+        <input type="submit" class="btn-send"
+         value="הרשם">
+
+    </div>
+</form>
+</div>

@@ -1,0 +1,43 @@
+.mypic {
+    /* margin-top: 100px; */
+    width: 80%;
+    text-align: right;
+    margin-right: 20%;
+    margin-bottom: 10%;
+}
+
+.rings {
+    /*    width: calc(85% / 3);*/
+    text-align: center;
+    border: 20px 20px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 70px;
+    display: inline-block;
+    /* width: 10px; */
+}
+
+#image {
+    /*width: 250px;*/
+    width: 100px;
+
+}
+
+#fig {
+    font-size:15px;
+    margin-top: 20px;
+}
+
+.btn-send {
+    background-color:#ac97a5;
+
+    /*text-align: center;*/
+    font-family: 'Rubik','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    width: 150px;
+    margin-right: 10px;
+    color: white;
+    text-align: center;
+    border: 0px;
+    border-radius: 2px;
+}

@@ -1,0 +1,51 @@
+
+
+.mypic {
+    /* margin-top: 100px; */
+    width:150%;
+    text-align: right;
+   
+    margin-bottom: 10%;
+ 
+    direction: rtl;
+    margin-left: 40%;
+}
+
+.rings {
+    /*    width: calc(85% / 3);*/
+    text-align: center;
+    border: 20px 20px;
+    text-align: center;
+    
+    margin-left: 20%;
+    display: inline-block;
+    /* width: 10px; */
+}
+
+#image {
+    /*width: 250px;*/
+    width: 350px;
+
+}
+
+#fig {
+    font-size:25px;
+    margin-top: 20px;
+}
+
+.btn-send {
+    background-color:#ac97a5;
+
+    /*text-align: center;*/
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 25px;
+    font-weight: bold;
+    width: 350px;
+  
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border: 0px;
+    border-radius: 2px;
+
+}

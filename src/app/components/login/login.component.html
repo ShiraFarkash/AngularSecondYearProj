@@ -1,0 +1,44 @@
+<div style="margin-top: 15%;"></div>
+<div class="mainforcontect" >
+    <h3 style="font-size: 40px; text-align:center ;
+    display: block; margin-top: 15%;">כניסה לחשבון</h3>
+<p  class="text">הכנס לחשבון שלך ותוכל לצפות בכל ההזמנות הקודמות</p>
+<form [formGroup]="loginForm" class="main"
+ (submit)="checkUser()">
+    <div class="form-group">
+        <label for="userName">שם משתמש</label>
+        <input type="text" formControlName="userName"
+     
+         placeholder="שם משתמש" class="fill form-control"
+          id="userName">
+
+        <span class="error"
+         *ngIf="loginForm.controls['userName'].errors!=null">
+            *שדה חובה</span>
+
+    </div>
+    <div class="form-group">
+        <label for="password">סיסמא</label>
+        <input  type="password" placeholder="סיסמא"
+         formControlName="password" class="fill form-control"
+          id="password">
+         
+        <span class="error" *ngIf="loginForm.controls['password']
+           .errors!=null">*שדה חובה</span>
+    </div>
+    <div>
+        <input appZoomIn type="submit" class="btn-send"
+         value="כניסה">
+        <div class="error" *ngIf="signInError">
+            שם משתמש או סיסמא שגויים
+        </div>
+
+    </div>
+</form>
+<p class="text">אין לך עדיין חשבון?</p>
+<form class="main" (submit)="goRegister()" >
+  
+<input appZoomIn class="btn-send" type="submit" value="הרשם עכשיו">
+</form>
+
+</div>

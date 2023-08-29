@@ -1,0 +1,30 @@
+.table td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(0,0,0,.1);
+    font-size: 20px;
+    text-align: center;
+}
+
+.table th {
+    text-align: center;
+
+    font-size: 30px;
+}
+
+.table tbody tr :hover{
+ background-color: hwb(332 84% 11%);
+}
+
+.table {
+margin-left: 10%;
+    width:80% ;
+    
+}
+
+.main h1, h3{
+    margin-right: 10%;
+   direction: rtl;
+   font-size: 20px;
+
+}

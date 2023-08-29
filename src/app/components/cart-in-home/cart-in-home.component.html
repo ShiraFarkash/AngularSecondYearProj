@@ -1,0 +1,11 @@
+<div class="mypic"  *ngIf="parameter!= null && ClickOnPic2==false">
+    <div class="rings">
+        <figure style="display: flex;">
+            <img id="image" src="assets\{{parameter.picturSRC}}">
+            <figcaption id="fig"> <b>שם: </b>{{parameter.name}}<br />  <b>{{parameter.price|currency:"ILS"}}</b> <br /> <b>סוג:</b> זהב לבן</figcaption>
+            
+        </figure>
+        <button class="btn-send" (click)="BackPage()">חזרה לרשימה</button>
+    </div>
+   
+</div>

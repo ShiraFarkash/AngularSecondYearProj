@@ -1,0 +1,128 @@
+body{
+    direction: rtl;
+    
+}
+
+
+.main_div{
+    display: flex;
+    direction: rtl;
+    margin-right: 20%;
+}
+.main_div div {
+    display: inline-block;
+}
+    
+
+.welcame {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+    animation-duration: 5s;
+    animation-name: lights;
+    /* margin-right: 10%; */
+    /*display:inline-block;*/
+}
+@keyframes lights {
+    0% {opacity: 0; /*font-size:80px*/}
+
+    50%{opacity: 0.5; /*font-size:100px*/}
+
+    100% {opacity: 2;/* font-size:80px*/}
+   
+}
+.moment p {
+    direction: ltr;
+    text-align: center;
+    font-size: 45px;
+    font-family: Aharoni;
+    display:inline-block;
+    margin-top:20%;
+}
+
+
+.pic img {
+    width: 300px;
+    border-radius: 18px;
+    background-color: #000000;
+    margin-right: 8%;
+    display: inline-block;
+}
+
+
+
+
+
+@keyframes lights {
+    0% {opacity: 0; /*font-size:80px*/}
+
+    50%{opacity: 0.5; /*font-size:100px*/}
+
+    100% {opacity: 2;/* font-size:80px*/}
+   
+}
+
+
+
+.pic {
+    display: inline-block;
+    margin-top: 10%;
+    margin-right: 15%;
+
+    margin: 1px;
+    position: relative;
+    /* width: 200px;*/
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+    .pic:hover img {
+        transform: scale(1,1);
+        transition: all 1.5s;
+    }
+
+    .pic:hover .over {
+        opacity: 0.5;
+        transition: all 1.5s;
+    }
+
+    .pic:hover .btn-img {
+        opacity: 1;
+        transition: all 1.5s;
+    }
+
+    .pic img {
+        /*width: 200px;*/
+        transform: scale(1.2,1.2) translate(-5%, -5%);
+        transition: all 1.5s;
+    }
+
+    .pic .over {
+        position: absolute;
+        background-color: white;
+        width: 400px;
+        height: 400px;
+        top: 0;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+
+.btn-img {
+    color: black;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 1.5rem;
+    font-family: 'Tahoma';
+    border-radius: 7px;
+    opacity: 0;
+    padding: 6px 15px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1.5s;
+}

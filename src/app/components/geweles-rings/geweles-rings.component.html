@@ -1,0 +1,23 @@
+<h3 style="font-size: 40px; text-align:center ;display: block; margin-top: 15%;">המוצרים שלנו</h3>
+    
+    <div style="display:inline-block;margin-top: 1%; ">
+       
+        <!-- 
+        <div class="welcame" style="display:block  "> <p> w e l c o m e</p> </div>
+
+        <div class="moment" style=" text-align:center; display:block "> <p>for moment of joy...</p></div> -->
+
+        <div class="mypic" *ngIf="ClickOnPic==false">
+            <div class="rings" *ngFor="let a of allPic">
+                <figure>
+                    <img id="image" src="assets\{{a.picturSRC}}">
+                    <figcaption id="fig">{{a.name}} <b>{{a.price| currency:"ILS"}}</b></figcaption>
+                </figure>
+                <button class="btn-send" (click)="pushToChild(a)">לפרטים</button>
+            </div>
+        
+        </div>
+        
+        <app-cart-in-home (parmameter2)="ClickOnPic=$event" [ClickOnPic2]="!ClickOnPic" [parameter]="picSendToChid">
+        </app-cart-in-home>
+</div>

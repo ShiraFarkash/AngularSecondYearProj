@@ -1,0 +1,158 @@
+<h3 style="font-size: 40px; text-align:center ;display: block; margin-top: 15%;">צור קשר</h3>
+<div class="mainforcontect" >
+
+    <div class="center" style="display:inline-block;">
+
+        <div class="contact">
+            <h3>צרו קשר</h3>
+        </div>
+        <div class="contact">
+            <p>תשאלו אותנו כל מה שתרצו ואנחנו מבטיחים לחזור אליכם במהירות האפשרית.</p>
+        </div>
+        <form [formGroup]="ContacUsForm" (ngSubmit)="submitForm()">
+            <div>
+
+                <label>
+                    <br />
+                    <input formControlName="name" type="text" name="fullname" class="fill" value size="40 "
+                        aria-required="true" aria-invalid="false" placeholder="שם מלא*" />
+                </label><br />
+                <!-- <span class="error" *ngIf="isFormSubmitted&&ContacUsForm.controls['name'].errors!=null">
+                    *הכנס נתונים
+                </span> -->
+            </div>
+
+            <div>
+                <label>
+                    <br />
+                    <input formControlName="phone" type="tel" name="tell" class="fill" value size="40 "
+                        aria-required="true" aria-invalid="false" placeholder="טלפון*" />
+                </label>
+                <br />
+                <!-- <span class="error" *ngIf="isFormSubmitted&& ContacUsForm.controls['phone'].errors!=null">
+                    *הכנס נתונים
+                </span> -->
+            </div>
+
+            <div>
+                <label>
+                    <br />
+                    <input formControlName="email" type="email" name="email" class="fill" value size="40 "
+                        aria-required="true" aria-invalid="false" placeholder="דואל*" ng-model="email" />
+                </label>
+                <br />
+                <!-- <span class="error" *ngIf="isFormSubmitted&& ContacUsForm.controls['email'].errors!=null">
+                    *הכנס נתונים
+                </span> -->
+            </div>
+
+            <i>ההפניה בנושא הזמנה קיימת:</i> <br />
+
+            <div *ngFor="let a of RADIO_LIST">
+                <input #radioB (click)="chose(radioB.id)" type="radio" [id]="a.name" [value]="a.value"
+                    [checked]="a.checked" formControlName="OrderOptions" />
+                <label [for]="a.name">{{a.value}}</label>
+            </div>
+
+            <!-- <span class="error" *ngIf="ContacUsForm.controls['OrderOptions'].errors!=null ">
+                הקש את בחירתך
+            </span> -->
+
+            <div *ngIf="RADIO_LIST[0].checked==true">
+                <p style="margin-top: 0px; ">
+                    <label>
+                        <input formControlName="order-number" type="number" name="order-number" class="fill"
+                            aria-required="true" aria-invalid="false" min="1" placeholder="הכנס מספר הזמנה*" />
+                    </label>
+                </p>
+                <!-- <span class="error"
+                *ngIf=" ContacUsForm.controls['order-number'].errors!=null">
+                   *הכנס נתונים
+                 </span> -->
+            </div>
+            <br />
+
+            <div>
+                <label for="city" class="fill">בחר אזור מגורים:</label><br />
+                <input formControlName="city" list="city" name="city" class="fill" style="text-align:right">
+                <datalist id="city">
+                    <option value="מרכז">
+                    <option value="צפון">
+                    <option value="דרום">
+                </datalist>
+                <br />
+                <!-- <span class="error"
+                *ngIf=" ContacUsForm.controls['city'].errors!=null">
+                   *הכנס נתונים
+                 </span> -->
+            </div>
+            <div>
+                <label>
+                    <br />
+                    <textarea formControlName="free-message" class="filltext" name="free-message" cols="40" rows="10"
+                        placeholder="טקסט חופשי"></textarea>
+
+                </label>
+                <!-- <br />
+                <span class="error" *ngIf=" ContacUsForm.controls['free-message'].errors!=null">
+                    *הכנס נתונים
+                </span> -->
+            </div>
+
+
+
+            <span class="error" *ngIf="isFormSubmitted &&
+            (ContacUsForm.controls['free-message'].errors!=null ||
+            ContacUsForm.controls['city'].errors!=null || 
+            ContacUsForm.controls['order-number'].errors!=null ||
+            ContacUsForm.controls['OrderOptions'].errors!=null ||
+            ContacUsForm.controls['email'].errors!=null ||
+            ContacUsForm.controls['phone'].errors!=null||
+            ContacUsForm.controls['name'].errors!=null)">
+                *אנא מלא את כל השדות
+            </span>
+
+
+            <!-- submit button -->
+            <p>
+                <label>
+                    <br />
+                    <input class="btn-send" type="submit" name="send"
+                        onclick=" alert('נשלח בהצלחה')" value="שלח " />
+                    <input  class="btn-send" type="reset" name="reset"
+                        value="איפוס " />
+                </label>
+            </p>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <div style="display:flex">
+        <div class="next">
+
+            <div class="emp"></div>
+
+            <div class="emp">
+                <p> 077-3647756</p>
+            </div>
+
+            <div class="emp"></div>
+
+        </div>
+        <div class="next">
+            <div class="emp">
+                <p>המנהרה 16 (בית בכר) הרצליה, ישראל</p>
+            </div>
+            <div class="emp"></div>
+            <div class="emp">
+                <p><br />שעות מענה טלפוני: <br />א'-ה': 9:00-17:00 </p>
+            </div>
+        </div>
+    </div>
+</div>
